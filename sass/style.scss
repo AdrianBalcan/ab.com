@@ -1,0 +1,25 @@
+/*
+  ========================================
+  Styles
+  ========================================
+*/
+
+// Util ----------------------------------
+@import 'util/reset/reset';
+@import 'util/variables/variable';
+
+// Mixins --------------------------------
+@import 'mixins/clearfix';
+@import 'mixins/grid';
+@import 'mixins/responsive';
+@import 'mixins/background';
+
+// Sections ------------------------------
+@import 'sections/header';
+@import 'sections/banner';
+@import 'sections/about-me';
+@import 'sections/skills';
+@import 'sections/quote';
+@import 'sections/contact-section';
+@import 'sections/footer';
+@import 'sections/error';

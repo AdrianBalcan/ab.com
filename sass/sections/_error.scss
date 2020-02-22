@@ -1,0 +1,97 @@
+/*
+  ========================================
+  Error
+  ========================================
+*/
+
+#notfound {
+	position: relative;
+	height: 100vh;
+	#notfound-logo {
+		@extend #logo;
+		img {
+			margin: 20px auto 0;
+		}
+	}
+	.notfound {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		-o-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		width: 100%;
+		max-width: 520px;
+		line-height: 1.4;
+		text-align: center;
+		.notfound-404 {
+			position: relative;
+			height: 240px;
+			@include tablet {
+				height: 200px;
+			}
+			@include phone {
+				height: 162px;
+			}
+			h1 {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				-webkit-transform: translate(-50%, -50%);
+				-ms-transform: translate(-50%, -50%);
+				-o-transform: translate(-50%, -50%);
+				transform: translate(-50%, -50%);
+				font-family: $primary-font;
+				font-size: 252px;
+				font-weight: 900;
+				color: $primary-color;
+				text-transform: uppercase;
+				letter-spacing: -40px;
+				margin: 0 0 0 -20px;
+				@include tablet {
+					font-size: 200px;
+				}
+				@include phone {
+					height: 150px;
+					font-size: 162px;
+					line-height: 162px;
+				}
+				> span {
+					text-shadow: -8px 0 0 $secondary-color;
+				}
+			}
+			h3 {
+				position: relative;
+				font-family: $secondary-font;
+				font-size: $base-font-size;
+				font-weight: 700;
+				text-transform: uppercase;
+				color: $primary-color;
+				margin: 0;
+				letter-spacing: 3px;
+			}
+		}
+		h2 {
+			font-family: $secondary-font;
+			font-size: 20px;
+			font-weight: 400;
+			text-transform: uppercase;
+			color: $primary-color;
+			margin-top: 0;
+			padding: 0 20px;
+			@include phone {
+				font-size: $base-font-size;
+			}
+		}
+		.notfound-links {
+			@extend .footer-mobile-links;
+			display: block;
+			a {
+				font-weight: 700;
+                                border: 2px solid black;
+                                padding: 0px 10px 0px 10px;
+			}
+		}
+	}
+}

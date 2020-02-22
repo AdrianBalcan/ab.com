@@ -1,0 +1,37 @@
+/*
+  ========================================
+  Responsive
+  ========================================
+*/
+
+@import '../util/variables/variable';
+
+@mixin phone-xs {
+	@media (max-width: $phone-xs) {
+		@content;
+	}
+}
+
+@mixin phone {
+	@media (max-width: $phone) {
+		@content;
+	}
+}
+
+@mixin tablet {
+	@media (max-width: $tablet) {
+		@content;
+	}
+}
+
+@mixin tablet-lg {
+	@media (max-width: $tablet-lg) {
+		@content;
+	}
+}
+
+@mixin laptop {
+	@media (max-width: $laptop) {
+		@content;
+	}
+}

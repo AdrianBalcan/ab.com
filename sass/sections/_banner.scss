@@ -1,0 +1,94 @@
+/*
+  ========================================
+  Main Banner
+  ========================================
+*/
+
+.banner-section {
+	position: relative;
+	height: 100%;
+	min-height: 100vh;
+	@include cover-background('../images/main-banner.jpg');
+	z-index: 0;
+	@include tablet-lg {
+		background-attachment: initial;
+	}
+	@include phone {
+		min-height: 700px;
+	}
+	&::after {
+		position: absolute;
+		content: '';
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		max-width: 50%;
+		margin-left: auto;
+		background-color: $secondary-color;
+		opacity: .4;
+		z-index: -1;
+		@include tablet {
+			max-width: 100%;
+		}
+	}
+	.banner-wrapper {
+		position: absolute;
+		top: 50%;
+		right: 0;
+		left: 0;
+		-webkit-transform: translateY(-50%);
+		-moz-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		-o-transform: translateY(-50%);
+		transform: translateY(-50%);
+		max-width: 50%;
+		margin-left: auto;
+		@include tablet {
+			max-width: 100%;
+		}
+	}
+}
+
+.over-banner {
+	max-width: 400px;
+	margin: 0 auto;
+	padding: 0 20px;
+	font-family: $primary-font;
+	color: $primary-color;
+	text-align: center;
+	z-index: 1;
+	h1 {
+		font-size: 72px;
+		font-weight: 300;
+		line-height: 90px;
+		text-transform: uppercase;
+		@include laptop {
+			font-size: 50px;
+			line-height: 60px;
+		}
+		@include tablet-lg {
+			font-size: 40px;
+			line-height: 50px;
+		}
+		@include phone-xs {
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+	strong {
+		display: block;
+		font-size: 20px;
+		font-weight: 700;
+		line-height: 33px;
+		margin: 25px 0;
+		@include phone-xs {
+			margin: 15px 0;
+		}
+	}
+	p {
+		font-size: $base-font-size;
+		font-family: $secondary-font;
+		line-height: 28px;
+	}
+}

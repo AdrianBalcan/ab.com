@@ -1,0 +1,107 @@
+/*
+  ========================================
+  Skills
+  ========================================
+*/
+
+.skills-section {
+	.skills-wrapper {
+		.skills-title {
+			@extend .about-me-desc;
+			margin-top: 110px;
+			margin-bottom: 110px;
+			@include tablet-lg {
+				margin-top: 35px;
+				margin-bottom: 35px;
+			}
+		}
+		.skills-item {
+			width: 50%;
+			max-height: 520px;
+			overflow: hidden;
+			@include laptop {
+				max-height: 420px;
+			}
+			@include tablet-lg {
+				max-height: 350px;
+			}
+			@include tablet {
+				width: 100%;
+				order: 2;
+			}
+			@include phone {
+				max-height: 285px;
+			}
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.skills-description {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -o-flex;
+			display: flex;
+			align-items: center;
+			background-color: $third-color;
+			@include tablet-lg {
+				&:nth-child(odd) {
+					.skills-desc {
+						max-width: 310px;
+						margin-right: 0;
+					}
+				}
+			}
+			@include tablet {
+				flex-flow: row wrap;
+				&:nth-child(odd) {
+					.skills-desc {
+						max-width: 100%;
+					}
+				}
+			}
+			.skills-desc {
+				@extend .about-me-desc;
+				text-align: left;
+				@include tablet {
+					width: 100%;
+					order: 1;
+					text-align: center;
+					margin-bottom: 20px;
+				}
+				span {
+					font-size: 22px;
+					font-weight: 700;
+					text-transform: uppercase;
+					@include phone-xs {
+						font-size: 18px;
+						margin-bottom: 15px;
+					}
+				}
+				a {
+					display: inline-block;
+					font-family: $secondary-font;
+					font-size: $base-font-size;
+					line-height: 28px;
+					color: $primary-color;
+					padding: 5px 15px;
+					border: 1px solid $primary-color;
+					border-radius: 25px;
+					text-decoration: none;
+					margin-top: 35px;
+					-webkit-transition: background-color .2s ease-in-out, color .2s ease-in-out;
+					-moz-transition: background-color .2s ease-in-out, color .2s ease-in-out;
+					-o-transition: background-color .2s ease-in-out, color .2s ease-in-out;
+					transition: background-color .2s ease-in-out, color .2s ease-in-out;
+					&:hover {
+						background-color: $primary-color;
+						color: $secondary-color;
+					}
+					@include phone-xs {
+						margin-top: 15px;
+					}
+				}
+			}
+		}
+	}
+}

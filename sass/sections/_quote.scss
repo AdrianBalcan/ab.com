@@ -1,0 +1,59 @@
+/*
+  ========================================
+  Quote
+  ========================================
+*/
+
+.quote-section {
+	background-color: $third-color;
+	padding: 70px 0;
+	.quote-wrapper {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		background-color: $secondary-color;
+		@include tablet {
+			flex-flow: row wrap;
+		}
+		.quote-item {
+			width: 50%;
+			max-height: 440px;
+			overflow: hidden;
+			@include laptop {
+				max-height: 320px;
+			}
+			@include tablet {
+				width: 100%;
+				order: 2;
+			}
+			@include phone {
+				max-height: 200px;
+			}
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.quote-desc {
+			@extend .about-me-desc;
+			max-width: 500px;
+			text-align: left;
+			@include tablet {
+				max-width: 100%;
+				margin-bottom: 25px;
+			}
+			strong {
+				font-weight: 300;
+				@include phone-xs {
+					font-size: 17px;
+					line-height: 28px;
+				}
+			}
+			p {
+				font-size: 18px;
+			}
+		}
+	}
+}

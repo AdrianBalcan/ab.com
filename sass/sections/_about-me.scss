@@ -1,0 +1,62 @@
+/*
+  ========================================
+  About Me
+  ========================================
+*/
+
+.about-me-section {
+	background-color: $fourth-color;
+	.about-me-wrapper {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		padding: 70px 0;
+		@include tablet-lg {
+			padding: 30px 0;
+		}
+		@include tablet {
+			flex-flow: row wrap;
+		}
+		.about-me-item {
+			width: 50%;
+			max-width: 880px;
+			max-height: 620px;
+			overflow: hidden;
+			@include tablet {
+				width: 100%;
+				order: 2;
+				margin-top: 20px;
+			}
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+}
+
+.about-me-desc {
+	@extend .over-banner;
+	@include tablet {
+		order: 1;
+	}
+	h2 {
+		font-size: $title-font-size;
+		font-weight: 300;
+		line-height: 54px;
+		text-transform: uppercase;
+		@include phone-xs {
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+	span {
+		display: block;
+		font-size: 18px;
+		font-weight: 400;
+		line-height: 31px;
+		margin: 30px 0;
+	}
+}

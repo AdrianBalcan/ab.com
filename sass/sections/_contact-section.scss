@@ -1,0 +1,102 @@
+/*
+  ========================================
+  Contact Section
+  ========================================
+*/
+
+.contact-section {
+	background-color: $fourth-color;
+	.contact-wrapper {
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -o-flex;
+		display: flex;
+		align-items: center;
+		@include tablet-lg {
+			flex-flow: row wrap;
+		}
+		.contact-item {
+			width: 50%;
+			max-height: 600px;
+			overflow: hidden;
+			@include tablet-lg {
+				width: 100%;
+				order: 2;
+				margin-top: 25px;
+			}
+			@include tablet {
+				max-height: 300px;
+			}
+			img {
+				display: block;
+				width: 100%;
+			}
+		}
+		.contact-form {
+			@extend .about-me-desc;
+			max-width: 500px;
+			min-width: 500px;
+			@include tablet-lg {
+				width: 100%;
+				order: 1;
+				margin-top: 30px;
+			}
+			@include tablet {
+				max-width: inherit;
+				min-width: inherit;
+				padding: 0;
+			}
+			.input-wrappers {
+				display: -webkit-flex;
+				display: -moz-flex;
+				display: -o-flex;
+				display: flex;
+				align-items: center;
+				margin: 10px -10px 0;
+				@include tablet {
+					flex-flow: row wrap;
+				}
+				.input-box {
+					width: 50%;
+					padding: 0 10px;
+					@include tablet {
+						width: 100%;
+					}
+				}
+			}
+			p.contactFormSuccess,
+			p.contactFormError {
+				display: none;
+			}
+			input, textarea {
+				width: 100%;
+				max-width: 100%;
+				background-color: transparent;
+				font-family: $secondary-font;
+				color: $primary-color;
+				font-size: $base-font-size;
+				font-weight: 300;
+				line-height: 28px;
+				height: 40px;
+				border: none;
+				border-bottom: 1px solid $primary-color;
+				margin-bottom: 20px;
+			}
+			textarea {
+				min-height: 130px;
+				@include phone-xs {
+					min-height: 85px;
+				}
+			}
+			.buttons-set {
+				.button {
+					background-color: transparent;
+					font-family: $primary-font;
+					font-size: $base-font-size;
+					line-height: 28px;
+					border: none;
+				}
+			}
+		}
+	}
+}
